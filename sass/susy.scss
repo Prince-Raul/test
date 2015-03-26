@@ -1,0 +1,10 @@
+@import "E:/Princeraul/bower_components/susy/sass/susy";
+@import "E:/Princeraul/bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import "E://Princeraul/sass_modules/style";
+$susy: (
+  container: 1120px,
+  columns: 12,
+  gutters: 1/4,
+  global-box-sizing: border-box,
+  use-custom: (rem: true )
+  );

@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import "susy";
+
+@include normalize();
+
+img{
+	max-width:100%;
+}
+%clearfix{
+	@include clearfix;
+}
+
+.wrap {
+	max-width:container(1120px);
+	@extend %clearfix;
+	margin: 0 auto;
+}
+/* Tells Susy there's 8 columns in the content */	
+.content {
+  @media (min-width: 700px) {
+    @include span(8);    
+  }
+}
+
+.sidebar {
+  @media (min-width: 700px) {
+    @include span(4 last);
+  }
+}
+.social{
+	padding:gutter();
+	@extend %clearfix;
+    &__list-item {
+	    @include gallery(2 of 10);
+	    margin-bottom: .5rem;
+	    @media (min-width:700px){
+			@include gallery(1 of 10);
+	    }
+    }
+  }
+
+.content,
+.sidebar {
+  background: aquamarine; 
+  text-align: center; 
+  font-size: 28px; 
+  line-height: 10em;
+  height: 10em;
+}
+
+.social {
+  background: black;
+}
+
+.test{
+	// background:#2e2e2e;
+	max-width:900px;
+	height:50px;
+	margin:0 auto;
+	text-align:center;
+	div{
+		background:green;
+		height: inherit;
+		float: left;
+		&:nth-child(1){
+			width: 32.2222%;
+			margin-right: -100%;
+			margin-left: 0;
+		}
+		&:nth-child(2){
+			width: 32.2222%;
+			margin-right: -100%;
+			margin-left: 33.3333%;
+		}
+		&:nth-child(3){
+			width: 32.2222%;
+			margin-right: -100%;
+			margin-left: 66.66666%;
+		}
+	}
+}
